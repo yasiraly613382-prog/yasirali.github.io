@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Daily Quotes</title>
+  <meta name="description" content="Best daily motivational quotes in English and Urdu.">
+  <meta name="keywords" content="motivational quotes, urdu quotes, life quotes, love quotes">
+  <style>
+    body {
+      background: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 50px;
+    }
+    h1 {color: #00eaff;}
+    .quote-box {
+      background: #222;
+      border-radius: 10px;
+      padding: 30px;
+      margin-top: 30px;
+      display: inline-block;
+      max-width: 500px;
+    }
+    .quote {
+      font-size: 20px;
+      line-height: 1.5;
+    }
+    .author {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #aaa;
+    }
+    button {
+      margin-top: 20px;
+      background: #00eaff;
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌟 Daily Quotes 🌟</h1>
+  <div class="quote-box">
+    <div class="quote" id="quote">"The best way to predict the future is to create it."</div>
+    <div class="author" id="author">— Peter Drucker</div>
+    <button onclick="newQuote()">New Quote</button>
+  </div>
+
+  <script>
+    const quotes = [
+      { text: "The best way to predict the future is to create it.", author: "Peter Drucker" },
+      { text: "Don’t wait for opportunity. Create it.", author: "Unknown" },
+      { text: "Zindagi tab behtar hoti hai jab hum khud behtar bante hain.", author: "Anonymous" },
+      { text: "Be yourself; everyone else is already taken.", author: "Oscar Wilde" },
+      { text: "Jo mehnat karta hai, uska waqt zaroor aata hai.", author: "Unknown" }
+    ];
+
+    function newQuote() {
+      const random = Math.floor(Math.random() * quotes.length);
+      document.getElementById("quote").textContent = `"${quotes[random].text}"`;
+      document.getElementById("author").textContent = "— " + quotes[random].author;
+    }
+  </script>
+</body>
+</html>
